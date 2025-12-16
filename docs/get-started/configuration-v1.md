@@ -842,18 +842,18 @@ FROM gemini-cli-sandbox
 # COPY ./my-config /app/my-config
 ```
 
-**Note:** Custom sandbox Docker images (`.gemini/sandbox.Dockerfile`) are only
-supported when running Gemini CLI from source. This feature requires a linked
-binary from the gemini-cli repository and will not work with the installed
-version.
-
-When `.gemini/sandbox.Dockerfile` exists and you are running from source, you
-can use `BUILD_SANDBOX` environment variable when running Gemini CLI to
-automatically build the custom sandbox image:
+When `.gemini/sandbox.Dockerfile` exists, you can use `BUILD_SANDBOX`
+environment variable when running Gemini CLI to automatically build the custom
+sandbox image:
 
 ```bash
 BUILD_SANDBOX=1 gemini -s
 ```
+
+**Note:** Custom sandbox Docker images (`.gemini/sandbox.Dockerfile`) are only
+supported when running Gemini CLI from source. This feature requires a linked
+binary from the gemini-cli repository and will not work with the installed
+version.
 
 ## Usage statistics
 
